@@ -4,152 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anzar Ali Khan | Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    body { background: #000; color: #fff; scroll-behavior: smooth; }
-
-    /* Navbar */
-    .glass {
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 1rem;
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    /* Typewriter Name */
-    #typed-name {
-      font-size: 10rem;
-      font-weight: 900;
-      color: #60a5fa;
-      white-space: nowrap;
-      border-right: 4px solid #60a5fa;
-      overflow: hidden;
-      text-align: left;
-      width: 100%;
-    }
-    #typed-name.finished {
-      border-right: none;
-    }
-
-    .sub-title {
-      font-size: 2rem;
-      color: #ccc;
-      margin-bottom: 1rem;
-    }
-
-    .skills span {
-      display: inline-block;
-      margin-right: 1rem;
-      font-size: 1.2rem;
-      color: #aaa;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease;
-    }
-    .skills span.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Hollow text */
-    .hollow {
-      font-size: 2rem;
-      font-weight: 900;
-      -webkit-text-stroke: 1px #60a5fa;
-      color: transparent;
-      letter-spacing: 0.2em;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 1s ease;
-    }
-    .aos-animate.hollow {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Resume button */
-    .resume-btn {
-      background: #60a5fa;
-      padding: 0.75rem 1.5rem;
-      border-radius: 9999px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .resume-btn:hover {
-      background: #3b82f6;
-      transform: scale(1.05);
-      box-shadow: 0 0 15px #60a5fa;
-    }
-
-    /* Divider */
-    .divider {
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-      margin: 4rem auto;
-      width: 80%;
-    }
-
-    /* Particles */
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-
-    /* Back to top button */
-    #backToTop {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #60a5fa;
-      color: white;
-      border: none;
-      padding: 12px 16px;
-      border-radius: 50%;
-      font-size: 20px;
-      cursor: pointer;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.3s ease;
-      box-shadow: 0 0 10px #60a5fa;
-    }
-    #backToTop.show {
-      opacity: 1;
-      visibility: visible;
-    }
-    #backToTop:hover {
-      background: #3b82f6;
-      transform: scale(1.1);
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link id="theme-css" rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
 </head>
-<body class="font-sans">
+<body>
+  <!-- STARRY BACKGROUND -->
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
 
-  <!-- Particle Background -->
-  <div id="particles-js"></div>
-
-  <!-- Navbar -->
-  <header class="glass flex justify-between items-center px-8 py-4 fixed w-full top-0 z-50">
-    <h1 class="text-2xl font-bold text-white">Anzar Ali Khan<span class="text-blue-400">.</span></h1>
-    <nav class="space-x-6">
-      <a href="#about" class="hover:text-blue-400">About</a>
-      <a href="#projects" class="hover:text-blue-400">Projects</a>
-      <a href="#contact" class="hover:text-blue-400">Contact</a>
+  <!-- NAV -->
+  <header>
+    <h1>Anzar Ali Khan<span>.</span></h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="flex flex-col items-start justify-center min-h-screen px-12 text-left">
-    <p class="sub-title" data-aos="fade-up">I am a Web Developer</p>
-    <div id="name-container" class="leading-none font-extrabold">
+  <!-- HERO -->
+  <section class="hero">
+    <p class="sub-title"></p>
+    <div id="name-container">
       <h2 class="hero-word">Anzar</h2>
       <h2 class="hero-word">Ali</h2>
       <h2 class="hero-word">Khan</h2>
     </div>
-    <div class="skills mt-6">
+    <div class="skills">
       <span>HTML</span>
       <span>CSS</span>
       <span>JavaScript</span>
@@ -159,216 +42,68 @@
       <span>MongoDB</span>
       <span>PostgreSQL</span>
     </div>
-    <div class="flex gap-6 mt-10">
-      <span class="hollow" data-aos="fade-up">DESIGN</span>
-      <span class="hollow" data-aos="fade-up" data-aos-delay="300">DEVELOP</span>
-      <span class="hollow" data-aos="fade-up" data-aos-delay="600">DEPLOY</span>
+    <div class="cta-words">
+      <span class="hollow animate-on-scroll">DESIGN</span>
+      <span class="hollow animate-on-scroll">DEVELOP</span>
+      <span class="hollow animate-on-scroll">DEPLOY</span>
     </div>
   </section>
 
-  <style>
-    #name-container h2 {
-      font-size: 9rem;
-      margin: 0;
-      color: white;
-      transition: color 1s ease;
-    }
-    #name-container h2.colored {
-      color: #60a5fa;
-    }
-    .skills span {
-      display: inline-block;
-      margin-right: 1rem;
-      font-size: 1.2rem;
-      color: #aaa;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease;
-    }
-    .skills span.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .hollow {
-      font-size: 2.5rem;
-      font-weight: 900;
-      -webkit-text-stroke: 1px #60a5fa;
-      color: transparent;
-      letter-spacing: 0.15em;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 1s ease;
-    }
-    .aos-animate.hollow {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+  <!-- RESUME -->
+  <section class="text-center">
+    <a href="C:\Users\AnzarAli\Downloads\Portfolio\AnzarAliKhanCV.pdf" download class="resume-btn">
+      📄 Download Resume
+    </a>
+  </section>
 
-  <script>
-    // Scroll-based color reveal for hero name (forward + reverse)
-    const heroWords = document.querySelectorAll(".hero-word");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("colored");
-          } else {
-            entry.target.classList.remove("colored");
-          }
-        });
-      },
-      { threshold: 0.7 }
-    );
-    heroWords.forEach((word) => observer.observe(word));
-
-    // Animate skills one by one after page load
-    window.addEventListener("load", () => {
-      const skills = document.querySelectorAll(".skills span");
-      skills.forEach((span, i) => {
-        setTimeout(() => span.classList.add("show"), i * 300);
-      });
-    });
-  </script>
-
-  <!-- About Section (Improved) -->
-  <section id="about" class="max-w-4xl mx-auto px-6 py-20 text-center" data-aos="fade-up">
-    <div class="flex flex-col items-center gap-6">
-      <img src="profile.jpg" alt="Anzar Ali Khan" class="w-32 h-32 rounded-full border-4 border-blue-400 shadow-lg mb-4">
-      <h3 class="text-3xl font-bold mb-2">About Me</h3>
-      <p class="text-gray-300 text-lg leading-relaxed max-w-2xl">
-        Hi! I'm <span class="text-blue-400 font-semibold">Anzar Ali Khan</span>, a passionate <b>Full-Stack Developer</b> who loves building beautiful and performant web applications.<br>
-        I specialize in <span class="text-blue-400">React</span>, <span class="text-blue-400">Node.js</span>, and modern databases. I enjoy solving real-world problems and collaborating with creative teams.
-      </p>
-      <div class="flex gap-4 mt-4">
-        <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-sm">React</span>
-        <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-sm">Node.js</span>
-        <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-sm">MongoDB</span>
-        <span class="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
-      </div>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h3 class="text-center animate-on-scroll">Projects</h3>
+    <div class="grid">
+      <div class="project-card animate-on-scroll">Project One</div>
+      <div class="project-card animate-on-scroll">Project Two</div>
+      <div class="project-card animate-on-scroll">Project Three</div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- Projects -->
-  <section id="projects" class="py-20">
-    <h3 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Projects</h3>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
-      <div class="glass p-6 rounded-2xl hover:scale-105 transition-transform" data-aos="zoom-in">Project One</div>
-      <div class="glass p-6 rounded-2xl hover:scale-105 transition-transform" data-aos="zoom-in" data-aos-delay="200">Project Two</div>
-      <div class="glass p-6 rounded-2xl hover:scale-105 transition-transform" data-aos="zoom-in" data-aos-delay="400">Project Three</div>
+  <!-- CONTACT -->
+  <section id="contact">
+    <h3 class="text-center animate-on-scroll">Contact Me</h3>
+
+    <!-- Social / Contact Links -->
+    <div class="social-links">
+      <a href="https://github.com/YourGitHubUsername" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"> GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/YourLinkedInUsername/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn"> LinkedIn
+      </a>
+      <a href="tel:+1234567890">
+        <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone"> +1 234 567 890
+      </a>
     </div>
-  </section>
 
-  <div class="divider"></div>
+    <form id="contactForm">
+      <label for="name">Your Name</label>
+      <input id="name" name="name" type="text" placeholder="Your Name" required>
 
-  <!-- Contact Section (Improved) -->
-  <section id="contact" class="max-w-2xl mx-auto px-6 py-20 text-center">
-    <h3 class="text-3xl font-bold mb-6" data-aos="fade-up">Contact Me</h3>
-    <form class="flex flex-col gap-6" id="contactForm">
-      <label class="text-left text-gray-400" for="name">Your Name</label>
-      <input id="name" name="name" type="text" placeholder="Your Name" class="glass px-4 py-3 rounded-xl" required data-aos="fade-up" data-aos-delay="100">
-      <label class="text-left text-gray-400" for="email">Your Email</label>
-      <input id="email" name="email" type="email" placeholder="Your Email" class="glass px-4 py-3 rounded-xl" required data-aos="fade-up" data-aos-delay="200">
-      <label class="text-left text-gray-400" for="message">Your Message</label>
-      <textarea id="message" name="message" rows="5" placeholder="Your Message" class="glass px-4 py-3 rounded-xl" required data-aos="fade-up" data-aos-delay="300"></textarea>
-      <button type="submit" class="resume-btn" data-aos="zoom-in" data-aos-delay="400">Send Message</button>
-      <p id="formMsg" class="text-green-400 mt-2 hidden">Thank you! I'll get back to you soon.</p>
+      <label for="email">Your Email</label>
+      <input id="email" name="email" type="email" placeholder="Your Email" required>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+      <button type="submit" class="resume-btn">Send Message</button>
+      <p id="formMsg">Thank you! I'll get back to you soon.</p>
     </form>
-    <div class="flex justify-center gap-6 mt-8">
-      <a href="mailto:your@email.com" class="hover:text-blue-400" aria-label="Email">
-        <svg width="24" height="24" fill="currentColor"><path d="M2 4v16h20V4H2zm2 2h16v.01L12 13 4 6.01V6zm0 2.236l7.293 6.364a1 1 0 0 0 1.414 0L20 8.236V18H4V8.236z"/></svg>
-      </a>
-      <a href="https://github.com/yourusername" target="_blank" class="hover:text-blue-400" aria-label="GitHub">
-        <svg width="24" height="24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.34-2.221-.253-4.555-1.112-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.847-2.337 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.417-.012 2.747 0 .267.18.577.688.48C19.138 20.197 22 16.444 22 12.021 22 6.484 17.523 2 12 2z"/></svg>
-      </a>
-      <!-- Add more icons as needed -->
-    </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- Resume Button Bottom -->
-  <section class="text-center py-16">
-    <a href="resume.pdf" download class="resume-btn" data-aos="zoom-in">⬇️ Download Resume</a>
-  </section>
-
-  <!-- Back to Top -->
-  <button id="backToTop">⬆</button>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true });
-
-    // Particles
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 80 },
-        color: { value: "#60a5fa" },
-        shape: { type: "circle" },
-        opacity: { value: 0.6 },
-        size: { value: 3, random: true },
-        line_linked: { enable: true, color: "#60a5fa", opacity: 0.4 },
-        move: { enable: true, speed: 1 }
-      },
-      retina_detect: true
-    });
-
-    // Typewriter for name
-    const name = "Anzar Ali Khan";
-    let idx = 0;
-    const typedNameEl = document.getElementById("typed-name");
-    function typeWriter() {
-      if (typedNameEl) {
-        typedNameEl.textContent = name.substring(0, idx++);
-        if (idx <= name.length) {
-          setTimeout(typeWriter, 150);
-        } else {
-          typedNameEl.classList.add("finished");
-          revealSkills();
-        }
-      }
-    }
-    if (typedNameEl) typeWriter();
-
-    // Animate skills one by one
-    function revealSkills() {
-      const skills = document.querySelectorAll(".skills span");
-      skills.forEach((span, i) => {
-        setTimeout(() => span.classList.add("show"), i * 300);
-      });
-    }
-
-    // Back to Top button
-    const backToTop = document.getElementById("backToTop");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        backToTop.classList.add("show");
-      } else {
-        backToTop.classList.remove("show");
-      }
-    });
-    backToTop.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href"))
-          .scrollIntoView({ behavior: "smooth" });
-      });
-    });
-
-    // Contact form feedback
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      document.getElementById('formMsg').classList.remove('hidden');
-      this.reset();
-    });
-  </script>
+  <!-- BACK TO TOP -->
+  <button id="backToTop" aria-label="Back to top">⬆</button>
+  <div class="snow"></div>
 </body>
+</html>
