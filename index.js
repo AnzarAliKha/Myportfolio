@@ -63,7 +63,7 @@ if (date === 25 && month === 11) {
 }
 
 // ⚡ Harry Potter (July 31)
-if (date === 6 && month === 8) {
+if (date === 06 && month === 8) {
   themeLink.setAttribute("href", "harrypotter.css");
 
   // Floating golden sparks
@@ -304,4 +304,5 @@ if (date === 27 && month === 7) {
     if (spookyKeys.length > 5) spookyKeys = spookyKeys.slice(-5);
   });
 }
+
 
