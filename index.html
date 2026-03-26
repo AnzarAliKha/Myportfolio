@@ -17,7 +17,19 @@
 </head>
 <body>
 
-    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fanzaralikha.github.io%2FMyportfolio%2F&count_bg=%23007ACC&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Total+Visits&edge_flat=false" alt="Visitor Count"/>
+<script>
+    // Private Visitor Tracker
+window.addEventListener('load', function() {
+    const scriptURL = "YOUR_SCRIPT_URL";
+    const siteURL = window.location.href;
+    const userAgent = navigator.userAgent;
+
+    // We use 'no-cors' so it doesn't trigger security warnings
+    fetch(`${scriptURL}?url=${encodeURIComponent(siteURL)}&ua=${encodeURIComponent(userAgent)}`, {
+        mode: 'no-cors'
+    });
+});
+</script>
 
 </body>
 </html>
